@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>To do list</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="icon.png" type="image/png" sizes="16x16">
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+   <header class="header"><span class="text"> Q3 Marketing Brand Campaign</span></header>
+   
+   <div class="main" id="div">
+   	    <div class="main_add_task">
+           <p><button class="add_task" id="add_task" onclick="addTask()">Add Task</button></p>
+        </div>
+          <div class="form" id="myform">
+   	           <textarea class="textarea"  placeholder="Text area..." id="text_area" ></textarea><br><br>
+               <input class="input" type="date" placeholder="Target date" id="myinput" ><br><br>
+               <button input type="button"  id="submit" onclick="myFunction()">Submit</button>
+          </div>
+          <div class="main_child" id="destination">
+        	  <ol class="planning">
+	        	   <h3 class="main_h3">Planning</h3>
+	             <li class="main_p">
+                <span class="main_p_1">Campaign brief and launch timeline</span>
+	               <button class="main_text_1 btn-status">Approved</button>
+                 <span class="main_blank">-</span>
+	               
+               </li>
+	             <li class="main_p">
+                  <span class="main_p_1">Overall goals an success metrics </span>
+	       	       <button class="main_text_1 btn-status">Approved</button>
+                 <span class="main_blank">-</span>
+	               
+               </li>
+	             <li class="main_p">
+                <span class="main_p_1">Approved budget</span>
+	       	       <button class="main_text_1 btn-status">Approved</button>
+                 <span class="main_blank">-</span>
+               </li>
+        	   </ol>
+          <ol class="milestoneItems">
+              <h3 class="main_h3">Milestones</h3>
+              <li class="main_p">
+                 <span class="main_p_1">Finalize design direction and creative concepts</span>
+                 <button class="main_text_2 btn-status">In Review</button>
+                 <span class="main_date">May 30</span>
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">Campaign messaging and positioning</span> 
+                 <button class="main_text_1 btn-status">Approved</button>
+                 <span class="main_date">May 30</span>
+                 
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">Select agency and secure SOW</span> 
+                 <button class="main_text_1 btn-status">Approved</button>
+                 <span class="main_date">Jun 02</span>
+                
+              </li>
+              <li class="main_p" >
+                 <span class="main_p_1">Media plan</span> 
+                 <button class="main_text_3 btn-status">In Progess </button>
+                 <span class="main_date">Jun 05</span>
+                
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">Campaign performance tracking</span> 
+                 <button class="main_text_3 btn-status">In Progess </button>
+                 <span class="main_date">Jul  15</span>
+                
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">Customer stories finalized</span> 
+                 <button class="main_text_3 btn-status">In Progess</button>                
+                 <span class="main_date">Aug 25</span>
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">videos assets completed</span> 
+                 <button class="main_text_4 btn-status">Not started</button>
+                 <span class="main_date">Aug 30</span>
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">Landing pages live on website</span> 
+                 <button class="main_text_4 btn-status">Not started</button>                
+                 <span class="main_date">Aug 30</span>
+              </li>
+              <li class="main_p">
+                 <span class="main_p_1">Campaign launch</span>
+                 <button class="main_text_4 btn-status" id="remove">Not started</button> 
+                 <span class="main_date">Sep 08</span>
+                 
+              </li>
+          </ol>              
+        </div>
+   </div>
+  <script>
+  var elem = document.getElementsByClassName('main_text_3');
+  console.log("elem",elem,elem.length);
+  for(var i = 0;i < elem.length;i++){
+    elem[i].addEventListener('click',function(event){
+      console.log("event",event);
+      event.target.style.color = "#f0f8ff";
+      event.target.style.background = "#00CED1";
+      event.target.innerHTML = "Approved";
+      moveTaskDone(event);
+    })
+  }   	
+  /*function conf() {
+  let a = document.getElementById("text_area").value;
+  let b = document.getElementById("myinput").value;
+  console.log(a, b);
+  alert("task description" + a +" input value  "+ b)
+  // var con=alert("Do you want to submit for sure?");
+  }*/
+  var element=document.getElementsByClassName('main_text_4');
+  console.log("element",element,element.length);
+  for(var i=0;i< element.length;i++){
+    element[i].addEventListener('click',function(event){
+      console.log("event",event);
+      /* event.target.style.color = "#FFFFFF";
+      event.target.style.background = "#1E90FF";*/
+      event.target.innerHTML = "In progress";
+      var origClass=event.target.className
+      console.log("origClass",origClass);
+      event.target.className="btn-status main_text_3";
+     
+    })
+  }
+  var elem = document.getElementsByClassName('main_text_1');
+  console.log("elem",elem,elem.length);
+  for(var i = 0;i < elem.length;i++) { 
+    elem[i].addEventListener('click',function(event){
+    console.log("event",event);
+    event.target.style.color = "#f0f8ff";
+    event.target.style.background = "#FF6347";
+    event.target.innerHTML = "Done";})
+  }     
+  /*var remove=document.getElementsByClassName('main_text_4');
+      console.log("remove",remove);
+  target.removeEventListener('click',remove);*/
+  function remove(){
+    element.removeEventListener('click');
+  }
+
+  function myFunction(){
+    var x=document.getElementById("text_area").value;
+    var y=document.getElementById("myinput").value;
+    console.log('values', x,y);
+    if (!x || !y) {
+      console.log('xyx');
+      // alert('ftygfyu');
+      return;
+    }
+    var newEl = document.createElement('li');
+    var taskDesc = document.createTextNode(x);
+    var taskTileElem = document.createElement('span');
+    taskTileElem.className = "main_p_1";
+    taskTileElem.appendChild(taskDesc)
+    newEl.appendChild(taskTileElem);
+    newEl.className = 'main_p';
+
+    var mainDateElem = document.createElement('span');
+    var mainDateText = document.createTextNode(y);
+    mainDateElem.appendChild(mainDateText);
+    mainDateElem.className = 'main_date';       
+
+    var taskStatus = document.createElement('button');
+    var taskStatusText = document.createTextNode("New Task");
+    taskStatus.appendChild(taskStatusText);
+    taskStatus.className = 'btn-status main_text_1';
+  
+    newEl.appendChild(taskStatus);
+    newEl.appendChild(mainDateElem);
+    document.getElementsByClassName('milestoneItems')[0].appendChild(newEl);
+
+    document.getElementById("text_area").value = null;
+    document.getElementById("myinput").value =null;
+  }
+  function moveTaskDone(event){
+    var parent = event.target.parentNode;
+    console.log(parent);
+   document.getElementsByClassName('planning')[0].appendChild(parent);
+}
+  function addTask(){
+    document.getElementById("myform").style.display = 'block';
+ 
+  }
+
+
+</script>
+</body>
+</html>

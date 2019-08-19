@@ -1,0 +1,38 @@
+to-do-list
+create to do list title
+link css file in head section
+create a body tag 
+
+
+
+Declare a variable assign array value to a variable.
+create a for loop with condition.
+define a event function on click..for change color ,background innerHtml and move element.
+
+Declare a variable assign array value to a variable.
+create a for loop with condition.
+define a event function on click..for change class oh html element.
+
+Declare a variable assign array value to a variable.
+create a for loop with condition.
+define a event function on click..for change color ,background and innerHtml.
+
+Define a function
+deaclare a variable x and assign text area value.
+deaclare a variable y and assign myinput value.
+make a condition if x is none or y is none than function return value.
+
+create a list item element and assing in a variable.
+create  a text note element and assign in a variable.
+create  a span element and assign in a variable.
+add class n append in child element.
+
+create  a span element and assign in a variable.
+create  a text note element and assign in a variable.
+add class n append in child element.
+
+
+create  a button element and assign in a variable.
+create  a new task element and assign in a variable.
+add class n append in child
+

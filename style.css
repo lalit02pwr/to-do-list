@@ -1,0 +1,159 @@
+/* css file */
+body{  
+   background-color:#F0F8FF;
+   max-height:100% auto;
+   max-width:100%;
+   font-family: 'Arimo', sans-serif; 
+  }
+.hr{
+  width:100%;
+}
+.header{  
+   background-color:white;
+   position:static;
+   height:10%;
+   padding:2%;
+   margin:0;
+  }
+  .planning
+  .milestoneItems,
+  {
+   margin:5%;
+  }
+.text{    
+   display:inline;
+	 text-align:center;
+   font-size:40px;
+   margin-left:30%;
+   padding-top:50%;
+   font-weight:bold;
+  }
+.main{    
+   background-color:white;
+	 position:relative;
+	 left:10%;
+   right:20%;
+	 top:5%;
+   display:table;
+   width:80%;
+  }
+.main_add_task{ 
+   border-bottom: 2px solid #F0F8FF;
+   margin-top:5%;
+   cursor:pointer;
+  }
+.main_child{  
+   position:relative;
+   margin-top:2%; 
+  }      
+.add_task{   
+   padding:1%;
+   margin-bottom:2%;
+	 margin-left:10%;
+	 border:2px solid #1E90FF;
+	 color:#1E90FF;
+	 width:10%;
+	 height:15%;
+  }
+.btn-status{
+   width:30%;
+   border-radius:25px;   
+   padding:5px;
+   color:white;
+   width:125px;
+   margin: 0 15px;
+   text-align:center;
+   cursor:pointer;
+   outline:none;
+  }
+.main_text_1{
+   border:2px #00CED1; 
+   background-color:#00CED1;
+  }
+.main_text_2{ 
+   border:2px #FFD700;
+   background-color:#FFD700;
+  }
+.main_text_4{ 
+   border:2px #FF4500 ;
+   background-color:#FF4500;
+  }
+.main_text_3{ 
+   border:2px #1E90FF;
+   background-color:#1E90FF;
+  }   
+.main_date{   
+   width:15%;
+   margin-left:7%;
+  } 
+.main_blank{  
+   float:right;
+   margin-right:10%;
+   width:10%; 
+  }                         
+.main_h3{    
+   border-bottom:solid gray;
+   border-bottom-width:80%;
+   margin-bottom:2%; 
+  }
+.main_p{     
+  overflow:none;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding: 5px;
+  margin-top: 10px;
+  height: 30px;
+  }
+.main_p_1{ 
+   width:60%;
+   display: inline-block;
+  }
+.form{       
+   margin-left:10%;
+	 margin-right:10%;
+   margin-top:5%;
+   background-color:#ccc;
+   overflow:auto;
+  }
+.input{      
+   background-color: #f8f8f8;
+   width:15%;
+   padding:left:12px 20px;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   box-sizing:border-box;
+   margin-top:2%;
+   margin-left:2%;
+   height:40px;
+  }
+#submit{ 
+   outline:none;   
+   float:right;
+   margin-right:5%;
+   margin-bottom:3%;
+   width:20%;
+   color:#fff;
+   background-color:#00CED1;
+   border-radius:10px;
+   font-weight:bold;
+   cursor:pointer;
+   padding:10px;
+  }
+.textarea{  
+   width: 95%;
+   height: 65px;
+   padding: 12px 20px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   background-color: #f8f8f8;
+   font-size: 16px;
+   resize: none;
+   margin-top:2%;
+   margin-left:2%;
+   text-align: 
+  }
+#myform{
+    display: none;
+  }
+  
